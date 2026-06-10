@@ -3,7 +3,8 @@
 :root {
   --text: #1f1f1f;
   --muted: #595959;
-  --accent: #5a6b8a;
+  --accent: #4a6491;
+  --heading: #2e4a76;
   --rule: #e3e3e3;
   --bg: #ffffff;
   --max-width: 880px;
@@ -67,12 +68,23 @@ h1 {
   font-size: 1.9rem;
   font-weight: 600;
   margin: 0 0 1.2rem;
+  color: var(--heading);
+}
+h1::after {
+  content: "";
+  display: block;
+  width: 3.2rem;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  margin-top: 0.5rem;
 }
 h2 {
   font-size: 1.3rem;
   font-weight: 600;
   margin: 2.2rem 0 0.8rem;
-  border-bottom: 1px solid var(--rule);
+  color: var(--heading);
+  border-bottom: 2px solid var(--accent);
   padding-bottom: 0.35rem;
 }
 .muted { color: var(--muted); }
@@ -102,7 +114,7 @@ h2 {
 
 /* Research entries */
 .paper { margin-bottom: 1.8rem; }
-.paper-title { font-weight: 600; }
+.paper-title { font-weight: 600; color: var(--heading); }
 .paper-note {
   font-family: var(--sans);
   font-size: 0.85rem;
@@ -141,6 +153,7 @@ details p {
 
 /* Teaching */
 .course { margin-bottom: 1.6rem; }
+.course strong { color: var(--heading); }
 ul.ta-list { padding-left: 1.2rem; }
 ul.ta-list li { margin-bottom: 0.35rem; }
 
