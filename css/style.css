@@ -111,8 +111,8 @@ h2 {
 
 /* Intro lede under the page title */
 .lede {
-  font-size: 1.12rem;
-  line-height: 1.65;
+  font-size: 0.9rem;
+  line-height: 1.6;
   color: var(--muted);
 }
 .lede + .lede { margin-top: 0.4rem; }
