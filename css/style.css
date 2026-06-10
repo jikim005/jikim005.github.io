@@ -109,6 +109,19 @@ h2 {
 }
 .muted { color: var(--muted); }
 
+/* Intro lede under the page title */
+.lede {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+.lede + .lede { margin-top: 0.4rem; }
+.lede-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 1.8rem 0 0;
+}
+
 /* Home */
 .home-grid {
   display: grid;
