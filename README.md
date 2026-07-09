@@ -11,17 +11,23 @@ Personal academic website of Jiyoon Kim — plain static HTML/CSS, hosted on Git
 
 ## How to update the site
 
-Any change follows the same three steps — edit, commit, push:
+Every change follows the same steps — **pull first**, then edit, commit, push:
 
 ```bash
-cd ~/jiyoon-kim-website
-# 1. make your edits (see common tasks below)
-# 2. save them into git's history
+cd ~/Projects/website
+# 1. pull down anything that changed on GitHub (prevents rejected pushes)
+git pull
+# 2. make your edits (see common tasks below)
+# 3. save them into git's history
 git add -A
 git commit -m "Describe what you changed"
-# 3. publish — the live site updates ~30 seconds after this
+# 4. publish — the live site updates ~30 seconds after this
 git push
 ```
+
+Always run `git pull` at the start. If you skip it and `git push` is
+rejected with "Updates were rejected because the remote contains work…",
+just run `git pull` (accept the default merge message) and `git push` again.
 
 To preview before publishing, run `python3 -m http.server 8000` in this
 folder and open http://localhost:8000 — check your edits, then push.
@@ -49,4 +55,7 @@ python3 -m http.server 8000
 
 ## Deployment
 
-Hosted on GitHub Pages from the `main` branch. The `CNAME` file points the site at `www.jiyoon-kim.com`; DNS is managed at the domain registrar (A records for apex → GitHub Pages IPs, CNAME for www → `<username>.github.io`).
+Hosted on GitHub Pages from the `main` branch (repo `jikim005/jikim005.github.io`).
+The `CNAME` file points the site at `www.jiyoon-kim.com`; DNS is managed at
+Cloudflare (four apex A records → GitHub Pages IPs, `www` CNAME → `jikim005.github.io`,
+all set to DNS-only/gray-cloud so GitHub can issue the HTTPS certificate).
