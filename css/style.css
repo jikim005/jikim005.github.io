@@ -55,7 +55,7 @@ header {
 .site-title:hover { text-decoration: none; }
 nav { font-family: var(--sans); font-size: 0.95rem; }
 nav a {
-  color: var(--blue-dark);
+  color: var(--text);
   margin-left: 1.4rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -75,6 +75,7 @@ nav { display: flex; align-items: center; }
   border-left: 1px solid var(--rule);
 }
 .nav-social a {
+  color: var(--blue-dark);
   margin-left: 0.8rem;
   text-transform: none;
   letter-spacing: 0;
@@ -151,8 +152,11 @@ h3 {
 .home-name h1 { margin-bottom: 0.2rem; color: var(--blue-dark); }
 .affiliation {
   font-family: var(--sans);
-  color: var(--primary);
-  font-size: 0.95rem;
+  color: var(--text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin: 0 0 1.5rem;
 }
 .welcome { font-size: 1.125rem; }
